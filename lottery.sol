@@ -15,6 +15,10 @@ contract Lottery {
     // payable keyword is for funcs that send
     // ether 
     function enter() public payable {
+        // require a transaction of .01 eth
+        // to enter lottery
+        require(msg.value > .01 ether);
+
         // send along some amount of ETH
         players.push(msg.sender);
     }
