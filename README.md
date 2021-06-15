@@ -1,5 +1,7 @@
 # eth-lottery
 
+![Lottery Banner](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freebsdnews.com%2Fwp-content%2Fuploads%2FETHEREUM_NAV-BAR-LOGO.png&f=1&nofb=1)
+
 This project features a smart contract that allows players to bet ETH in a lottery.
 
 There are two main variables here, a manager and a player.
