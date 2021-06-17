@@ -29,6 +29,7 @@ contract Lottery {
     }
 
     function pickWinner() public {
+        require(msg.sender == manager);
         // send ETH to winner's address
         uint index = random() % players.length;
         players[index].transfer(this.balance);
