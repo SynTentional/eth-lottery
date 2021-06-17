@@ -16,6 +16,9 @@ With these two variables, there are also two main functions of this contract:
 1. **enter**: Enters a player into the lottery
 2. **pickWinner**: Randomly picks a winner and sends them the prize pool
 
+
+Outside of these main points, there are a few small helper functions including getPlayers(), a modifier named restricted, and more... all of these can be found within the comments of lottery.sol
+
 ### Tech Stack
 This project utilizes Solidity & JavaScript
 
