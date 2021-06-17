@@ -23,4 +23,8 @@ contract Lottery {
         players.push(msg.sender);
     }
 
+    function random() private view returns (uint256) {
+        return uint(keccak256(block.difficulty, now, players));
+    }
+
 }
