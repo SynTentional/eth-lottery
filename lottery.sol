@@ -47,6 +47,7 @@ contract Lottery {
     }
 
     function getPlayers() public view returns (address[]) {
+        // returns lists of players
         return players;
     }
 
