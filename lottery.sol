@@ -28,10 +28,9 @@ contract Lottery {
         return uint(keccak256(block.difficulty, now, players));
     }
 
-    function pickWinner() public {
+    function pickWinner() public restricted {
         // require that only manager can
         // use this function
-        require(msg.sender == manager);
         // send ETH to winner's address
         uint index = random() % players.length;
         players[index].transfer(this.balance);
@@ -40,9 +39,15 @@ contract Lottery {
     }
 
     modifier restricted() {
-        // function modifier
+        // function modifier that only 
+        // allows the manager to use
+        // the function
         require(msg.sender == manager);
         _;
+    }
+
+    function getPlayers() public view returns (address[]) {
+        return players;
     }
 
 }
