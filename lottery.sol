@@ -24,7 +24,12 @@ contract Lottery {
     }
 
     function random() private view returns (uint256) {
+        // pseudo random number generator
         return uint(keccak256(block.difficulty, now, players));
+    }
+
+    function pickWinner() public {
+        uint index = random() % players.length;
     }
 
 }
