@@ -29,6 +29,8 @@ contract Lottery {
     }
 
     function pickWinner() public {
+        // require that only manager can
+        // use this function
         require(msg.sender == manager);
         // send ETH to winner's address
         uint index = random() % players.length;
@@ -36,4 +38,11 @@ contract Lottery {
         // empty player list for next round
         players = new address[](0);
     }
+
+    modifier restricted() {
+        // function modifier
+        require(msg.sender == manager);
+        _;
+    }
+
 }
