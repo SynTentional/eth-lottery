@@ -6,7 +6,7 @@ This project features a smart contract that allows players to bet ETH in a lotte
 
 ![Lottery Banner](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbestbitcoingames.com%2Fwp-content%2Fuploads%2F2018%2F02%2FEthereum-Lottery.png&f=1&nofb=1)
 
-**Lottery Contract**
+## Lottery Contract
 
 There are two main variables here, a manager and a player.
 1. **Manager**: Address of the person who created the contract
@@ -16,8 +16,8 @@ With these two variables, there are also two main functions of this contract:
 1. **enter**: Enters a player into the lottery
 2. **pickWinner**: Randomly picks a winner and sends them the prize pool
 
-**Tech Stack**
+### Tech Stack
 This project utilizes Solidity & JavaScript
 
-**Resources and Credits**
+### Resources and Credits
 Credits to Stephen Grider's Ethereum and Solidity: The Complete Developer's Guide
