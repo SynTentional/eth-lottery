@@ -29,7 +29,10 @@ contract Lottery {
     }
 
     function pickWinner() public {
+        // send ETH to winner's address
         uint index = random() % players.length;
+        players[index].transfer(this.balance);
+        // empty player list for next round
+        players = new address[](0);
     }
-
 }
